@@ -13,10 +13,12 @@ def load_and_process_data(file_path):
 
     trades['PnL'] = trades.apply(lambda row: row['tradeAmt'] * row['tradePx'] * (-1 if row['orderSide'] == 'buy' else 1), axis=1)
     
-    trades = trades.sort_values('currentTime') # can be removed to improve performance if data is guaranteed to be in sorted order
+    trades = trades.sort_values('currentTime')
     trades['Cumulative_PnL'] = trades['PnL'].cumsum()
 
-    return trades
+    filename = os.path.splitext(os.path.basename(file_path))[0]
+
+    return trades,filename
 
 def calculate_total_pnl(trades):
     return trades['PnL'].sum()

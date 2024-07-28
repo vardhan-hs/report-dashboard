@@ -31,8 +31,14 @@ def register_callbacks(app, trades, cumulative_pnl_by_security):
         
         layout = go.Layout(
             title='Cumulative Gross PnL',
-            xaxis={'title': 'Time'},
-            yaxis={'title': 'Cumulative PnL'},
+            xaxis=dict(
+                title='Time',
+                gridcolor=COLORS['grid_color']
+            ),
+            yaxis=dict(
+                title='Cumulative PnL',
+                gridcolor=COLORS['grid_color']
+            ),
             plot_bgcolor=COLORS['background'],
             paper_bgcolor=COLORS['background'],
             font=dict(color=COLORS['text'])

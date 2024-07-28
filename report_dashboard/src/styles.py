@@ -1,82 +1,87 @@
-# styles.py
-
-# Color scheme
 COLORS = {
-    'background': '#000000',
+    'background': '#181818',
     'text': '#FFFFFF',
-    'primary': '#007BFF',
-    'secondary': '#6C757D',
-    'secondary_background': '#161A1D',
-    #'danger': '#DC3545',
-    #'warning': '#FFC107',
-    #'info': '#17A2B8'
+    'primary': '#FF6600',
+    'secondary_background': '#1F1F1F',
+    'border': '#333333',
+    'grid_color':"#202020"
 }
 
-# Font styles
 FONTS = {
     'main': 'Arial, sans-serif',
     'headers': 'Helvetica, sans-serif'
 }
 
-# Styles for specific components
 STYLES = {
     'main_container': {
         'backgroundColor': COLORS['background'],
-        'padding': '50px 100px',
+        'padding': '20px 100px',
         'fontFamily': FONTS['main'],
         'textAlign': 'center', 
     },
     'report_container': {
         'backgroundColor': COLORS['secondary_background'],
-        'padding': '100px',
+        'padding': '20px 100px 50px 100px',
         'fontFamily': FONTS['main'],
-        'textAlign': 'center', 
+        'textAlign': 'left', 
     },
     'header': {
         'color': COLORS['primary'],
         'fontFamily': FONTS['headers'],
         'fontSize': '28px',
-        'marginBottom': '20px'
+        'marginBottom': '40px'
     },
-    'subheader': {
-        'color': COLORS['secondary'],
+    'key_details_1': {
+        'color': COLORS['primary'],
         'fontFamily': FONTS['headers'],
         'fontSize': '20px',
         'marginTop': '15px',
         'marginBottom': '10px'
     },
-    'paragraph': {
-        'color': COLORS['text'],
+    'key_details_2': {
+        'color': COLORS['primary'],
+        'fontFamily': FONTS['headers'],
         'fontSize': '14px',
-        'lineHeight': '1.5'
+        'lineHeight': '2'
+    },
+    'subheader': {
+        'color': COLORS['text'],
+        'fontFamily': FONTS['headers'],
+        'fontSize': '14px',
+        'marginTop': '16px',
+    },
+    'report_name': {
+        'color': COLORS['text'],
+        'fontFamily': FONTS['headers'],
+        'fontSize': '24px',
+        'marginBottom': '15px',
+        'borderBottom': f'2px solid {COLORS["border"]}',
+        'paddingBottom': '5px'
     },
     'graph': {
         'backgroundColor': 'white',
-        'border': f'1px solid {COLORS["secondary"]}',
+        'border': f'1px solid {COLORS['border']}',
         'borderRadius': '5px',
         'padding': '10px'
     },
     'checklist': {
         'marginTop': '15px',
-        'marginBottom': '15px'
+        'marginBottom': '15px',
+        'textAlign': 'center'
     },
     'checklist_item': {
         'color': COLORS['text'],
         'fontSize': '14px',
-        'marginRight': '10px'
+        'marginRight': '20px'
     }
 }
 
-# Graph color scheme
 GRAPH_COLORS = [
     COLORS['primary'],
-    # COLORS['success'],
-    # COLORS['danger'],
-    # COLORS['warning'],
-    # COLORS['info'],
-    '#FF6B6B',  # Additional colors for more data series
+    '#00FFFF',
+    '#39FF14',
+    '#FF1493',
+    '#FF6B6B',
     '#4ECDC4',
-    '#45B7D1',
-    '#F9D56E',
-    '#FF8C42'
+    '#45B7D1'
 ]
